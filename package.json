@@ -1,0 +1,16 @@
+{
+  "name": "miproyectoweb",
+  "version": "1.0.0",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "cypress run",
+    "start": "react-scripts start --port 3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cypress": "^13.15.2"
+  }
+}
