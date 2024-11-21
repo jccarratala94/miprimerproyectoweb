@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Proyecto Web</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+</head> 
+<body>
+  <h1>¡Hola soy JC!</h1>
+<h2> Bienvenidos a mi página web </h2>
+<img src="../assets/imagenes/JRRTopoGigio.avif" alt="Juan Roman" width="350">
+<button id="aguanteboquita">Toca acá</button>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("aguanteboquita").onclick = mostrarMensaje;
+});
+
+function mostrarMensaje() {
+    alert("Aguante BocaBocaBoca y JRR");   
+}
+</script>
+</body>
+</html>
