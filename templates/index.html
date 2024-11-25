@@ -5,20 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Proyecto Web</title>
   <link rel="stylesheet" href="../styles/styles.css">
-</head> 
+</head>
 <body>
   <h1>¡Hola soy JC!</h1>
-<h2> Bienvenidos a mi página web </h2>
-<img src="../assets/imagenes/JRRTopoGigio.avif" alt="Juan Roman" width="350">
-<button id="aguanteboquita">Toca acá</button>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById("aguanteboquita").onclick = mostrarMensaje;
-});
+  <h2>Bienvenidos a mi página web</h2>
+  
+  <!-- Imagen -->
+  <img src="../assets/imagenes/JRRTopoGigio.avif" alt="Juan Roman" width="350">
 
-function mostrarMensaje() {
-    alert("Aguante BocaBocaBoca y JRR");   
-}
-</script>
+  <!-- Botón interactivo -->
+  <button id="aguanteboquita">Toca acá</button>
+  
+  <!-- Nuevo formulario -->
+  <h3>Formulario de contacto</h3>
+  <form id="formulario-contacto">
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required><br><br>
+    
+    <label for="email">Correo electrónico:</label><br>
+    <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required><br><br>
+    
+    <label for="mensaje">Mensaje:</label><br>
+    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="4" required></textarea><br><br>
+    
+    <button type="submit" id="enviar">Enviar</button>
+  </form>
+  
+  <!-- Mensaje de éxito -->
+  <p id="mensaje-exito" style="display:none; color: green;">¡Gracias por tu mensaje! Te responderemos pronto.</p>
+
+  <script>
+    // Botón interactivo
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById("aguanteboquita").onclick = function() {
+        alert("Aguante BocaBocaBoca y JRR");
+      };
+
+      // Manejar envío del formulario
+      const formulario = document.getElementById("formulario-contacto");
+      const mensajeExito = document.getElementById("mensaje-exito");
+
+      formulario.addEventListener("submit", function(evento) {
+        evento.preventDefault(); // Evitar el envío real del formulario
+        mensajeExito.style.display = "block";
+        formulario.reset(); // Limpiar los campos del formulario
+      });
+    });
+  </script>
 </body>
 </html>
