@@ -12,5 +12,17 @@ body {
   font-size: 16px;
   transition: all 0.3s ease;
 }
+#cuenta-regresiva {
+  font-family: Arial, sans-serif;
+  font-size: 1.2em;
+  color: #0074D9; /* Azul relacionado con Boca */
+  text-align: center;
+  margin: 20px 0;
+}
+
+#cuenta-regresiva span {
+  font-weight: bold;
+  color: #FFDC00; /* Amarillo relacionado con Boca */
+}
 
 
