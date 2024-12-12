@@ -52,6 +52,35 @@
       });
     });
   </script>
+  <script>
+    // Configuración inicial para el reloj de cuenta regresiva
+    const fechaPartido = new Date("2024-12-14T19:00:00").getTime(); // Fecha y hora del partido
+  
+    function actualizarCuentaRegresiva() {
+      const ahora = new Date().getTime(); // Tiempo actual
+      const diferencia = fechaPartido - ahora; // Diferencia entre la fecha del partido y ahora
+  
+      if (diferencia > 0) {
+        // Cálculo de días, horas, minutos y segundos
+        const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+  
+        // Actualización en el DOM
+        document.getElementById("dias").textContent = dias;
+        document.getElementById("horas").textContent = horas;
+        document.getElementById("minutos").textContent = minutos;
+        document.getElementById("segundos").textContent = segundos;
+      } else {
+        // Mensaje final cuando la cuenta regresiva termine
+        document.getElementById("cuenta-regresiva").textContent = "¡El partido ya comenzó!";
+      }
+    }
+  
+    // Actualización del reloj cada segundo
+    setInterval(actualizarCuentaRegresiva, 1000);
+  </script>  
 </body>
 </html>
 <!-- Contenedor del reloj -->
